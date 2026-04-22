@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import java.math.BigDecimal;
 
 @Entity
 @Getter
@@ -18,7 +19,7 @@ public class Book {
 
     private String title;
     private String isbn;
-    private Double price;
+    private BigDecimal price;
     private Integer stock;
 
     @ManyToOne(fetch = FetchType.LAZY)
