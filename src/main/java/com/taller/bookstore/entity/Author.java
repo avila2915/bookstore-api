@@ -3,6 +3,8 @@ package com.taller.bookstore.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -17,4 +19,8 @@ public class Author {
     private String name;
     private String biography;
     private String email;
+
+    // 🔥 RELACIÓN INVERSA (CLAVE)
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
+    private List<Book> books;
 }
