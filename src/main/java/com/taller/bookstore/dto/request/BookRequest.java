@@ -4,7 +4,7 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 
 import java.util.List;
-
+import java.math.BigDecimal;
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,7 +20,7 @@ public class BookRequest {
 
     @NotNull
     @Positive
-    private Double price;
+    private BigDecimal price;
 
     @NotNull
     @Min(0)
